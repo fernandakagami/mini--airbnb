@@ -53,7 +53,6 @@ export function SearchForm() {
 			<Form {...formMethods}>
 				<form
 					onSubmit={handleSubmit((data) => {
-						console.log("submit chamado", data);
 						handleSearch(data);
 					})}
 					className="flex w-full flex-row items-end justify-center gap-3 ps-8"

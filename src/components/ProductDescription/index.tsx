@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { Dot, MapPin, Star } from "lucide-react";
+import notFound from "@public/not_found.jpg";
 
 import { Product } from "@/shared/interfaces/product";
 import { amenitiesParser } from "@/shared/data/amenities-parser";
 import { EAmenities } from "@/shared/enums/amenity";
 
-import notFound from "../../../public/not_found.jpg";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Separator } from "../ui/separator";
@@ -42,7 +42,7 @@ export function ProductDescription({ product }: ProductDescriptionProps) {
 					className="h-96 w-full rounded-lg object-cover"
 					onError={handleError}
 					aria-description={product.title}
-					priority={false}
+					fetchPriority="high"
 				/>
 
 				{product.isAvailable ? null : <StatusBadge textSize="text-lg" />}
@@ -76,11 +76,14 @@ export function ProductDescription({ product }: ProductDescriptionProps) {
 
 						<div className="flex w-full flex-row items-end justify-between gap-2">
 							<Badge className="text-sm md:text-base">{product.propertyType}</Badge>
+
 							<div className="flex flex-row items-end gap-1">
 								<Star size={13} className="mb-0.5 text-yellow-500" fill="currentColor" />
+
 								<span className="text-sm font-bold text-yellow-500 md:text-[1rem]/[1.2rem]">
 									{product.rating.toString().replace(".", ",")}
 								</span>
+
 								<span className="text-xs text-gray-500 md:text-sm">({product.numberOfReviews} avaliações)</span>
 							</div>
 						</div>

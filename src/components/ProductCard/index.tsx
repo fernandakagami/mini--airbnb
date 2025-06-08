@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { MapPin, Star } from "lucide-react";
+import notFound from "@public/not_found.jpg";
 
 import { Product } from "@/shared/interfaces/product";
 
 import { Card, CardContent } from "../ui/card";
-import notFound from "../../../public/not_found.jpg";
 import { StatusBadge } from "../StatusBadge";
 
 interface ProductCardProps {
@@ -32,7 +32,6 @@ export function ProductCard({ product }: ProductCardProps) {
 					className="h-auto w-full object-cover"
 					onError={handleError}
 					aria-description={product.title}
-					priority={false}
 				/>
 			</div>
 
