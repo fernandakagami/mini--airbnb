@@ -1,40 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ⭐ Mini-Airbnb (Next.js)
 
-## Getting Started
+​
 
-First, run the development server:
+## ⭐ Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+​Desenvolver uma aplicação front-end utilizando Next.js + React.​​
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⭐ Contexto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+​A aplicação é um catálogo de acomodações com recursos de filtragem e visualização de detalhes. O usuário pode:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+​- Listar de Imóveis
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Filtrar Imóveis (Cidade, Estado, Tipo de imóvel, Faixa de preço, Capacidade de hóspedes, Quantidade de quartos, Comodidades e Somente imóveis disponíveis)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Visualizar Detalhes do Imóveis
 
-## Learn More
+- Simular de Reservas
 
-To learn more about Next.js, take a look at the following resources:
+- Feedback de Carregamento e Erro Visual
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⭐ Instruções de instalação e execução
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. git clone do repositório.
+2. npm install
+3. npm run dev
 
-## Deploy on Vercel
+- Para executar os testes: npm test ​
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⭐ Decisões técnicas​
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **ESLint** e **Prettier**, para padronizar o código e formatar de acordo com a padronização.
+- **TailwindCSS**, para estilizar de forma rápida com rápida manutenção.
+- **Shadcn**, como biblioteca de componentes por ter componentes prontos e personalizáveis, fácil integração com o TailwindCSS, pela economia de tempo e código organizado e modular.
+- **Axios**, para consumo de API.
+- **Zod e React Hook Form**, para validação e gerenciamento de formulários
+- **Testing Library**, para teste unitários. ​
+  ​
+
+## ⭐ Pontos para melhora
+
+- Botão dinâmico na página de detalhes após clicar em "Reservar"
+  ​- Melhorar design e funcionalidade da barra de pesquisa em desktop
+- Scroll para trazer mais imóveis na listagem de páginas
