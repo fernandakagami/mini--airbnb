@@ -1,17 +1,19 @@
-import { Header } from '@/components/Header'
-import { QueryParamsProvider } from '@/contexts/query-params.context'
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { Toaster } from 'sonner'
+import { Header } from "@/components/Header";
+import { Toaster } from "@/components/ui/sonner";
+import { QueryParamsProvider } from "@/contexts/query-params.context";
+
+import "@/styles/globals.css";
+// eslint-disable-next-line import/order
+import { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <QueryParamsProvider>
-      <div className='flex flex-col min-h-screen max-w-5xl mx-auto px-6 pt-6 pb-6'>
-        <Header />
-        <Component {...pageProps} />
-        <Toaster />
-      </div>
-    </QueryParamsProvider>
-  )    
+	return (
+		<QueryParamsProvider>
+			<div className="mx-auto flex min-h-screen max-w-5xl flex-col px-6 pb-6 pt-6">
+				<Header />
+				<Component {...pageProps} />
+				<Toaster />
+			</div>
+		</QueryParamsProvider>
+	);
 }
