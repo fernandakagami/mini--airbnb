@@ -6,9 +6,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { api } from '@/config/api'
 import { Suspense } from 'react'
 import { ProductCardSkeleton } from '@/components/ProductCardSkeleton'
-import { ParsedUrlQuery } from 'querystring'
 import { filterProductsByQuery } from '@/shared/utils/filter-products-by-query'
-import { useLoadMore } from '@/shared/hooks/use-load-more'
 
 interface HomeProps {
   products: Product[];
